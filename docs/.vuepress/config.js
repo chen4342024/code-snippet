@@ -14,6 +14,9 @@ module.exports = {
                 'js/is',
                 'js/reg',
                 'js/util',
+                'js/date',
+                'js/throttled',
+                'js/url',
             ]
         }, {
             title: 'CSS 相关',

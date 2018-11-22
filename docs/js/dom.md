@@ -1,6 +1,8 @@
 # Dom相关
 
-在不同浏览器获取滚动位置会有兼容问题，故需要进行一下兼容
+### 获取滚动位置
+
+> 在不同浏览器会有兼容问题，故需要进行一下兼容
 ```javascript
 //获取scrollTop
 function getScrollTop() {
