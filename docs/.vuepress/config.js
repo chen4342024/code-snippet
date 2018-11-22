@@ -5,12 +5,6 @@ module.exports = {
     themeConfig: {
         displayAllHeaders: true,
         sidebar: [{
-            title: '关于',
-            collapsable: false,
-            children: [
-                ['js/']
-            ]
-        }, {
             title: 'JS 相关',
             collapsable: false,
             children: [
