@@ -3,6 +3,7 @@
 ### 对象转字符串
 
 ```javascript
+// 将对象转换成 url参数 ： a=xxx&b=xxx 这样的字符串
 export function paramToStr(params = {}) {
     let paramArray = [];
     let keys = Object.keys(params);
@@ -20,6 +21,7 @@ export function paramToStr(params = {}) {
 ### 获取参数
 
 ```javascript
+// 从 location.search 中获取 query 参数
 export function getQuery(search) {
     var queryObj = new Object();
     if (search.indexOf('?') != -1) {
