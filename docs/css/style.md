@@ -68,3 +68,17 @@ overflow: hidden;
     line-height: normal;
 }
 ```
+
+### 禁用微信 webview 调整字体大小
+
+在微信上可以调整字体，有时候会导致我们整体的布局错乱。所以这里禁用掉微信的字体调整
+
+```css
+body {
+    -webkit-text-size-adjust: 100% !important; //禁止微信端字体缩放
+}
+```
+
+:::warning
+这块代码仅对 `IOS` 生效，`android` 上网络上有说用`WeixinJSBridge`，但是我没试。`android` 端就不处理了
+:::
