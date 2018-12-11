@@ -113,3 +113,4 @@ function render(tpl, data) {
     return new Function(code).apply(data);
 }
 ```
+

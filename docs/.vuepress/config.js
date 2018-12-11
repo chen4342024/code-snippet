@@ -36,7 +36,8 @@ module.exports = {
                 title: '其他',
                 collapsable: false,
                 children: ['other/git']
-            }
+            },
+            ['todo', '待办事项']
         ]
     }
 };
