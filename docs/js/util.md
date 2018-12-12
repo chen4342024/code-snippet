@@ -63,4 +63,21 @@ function chunk(array, process, context) {
 一旦某个函数需要花 50ms 以上的时间完成，就可以考虑能否分隔成多个小任务来完成
 :::
 
+### 浅拷贝
 
+```javascript
+//es5
+function shallowClone(source) {
+    var target = {};
+    for (var key in source) {
+        if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+
+// es6
+// {...source}
+// Object.assign({},source);
+```

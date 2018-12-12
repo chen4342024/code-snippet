@@ -6,13 +6,6 @@
 
 ### 异步引入脚本
 
-### 浅拷贝
-
-```javascript
-function extend() {
-    // todo
-}
-```
 
 ### 深拷贝
 
