@@ -6,13 +6,4 @@
 
 ### 异步引入脚本
 
-
-### 深拷贝
-
-```javascript
-function deepCopy(target) {
-    // todo
-}
-```
-
 ### js 运算

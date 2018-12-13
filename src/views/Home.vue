@@ -1,10 +1,9 @@
 <template>
-    <div class="home">
-        主页
-    </div>
+    <div class="home">主页</div>
 </template>
 
 <script>
+import { deepCopy } from "../utils/util.js";
 export default {
     name: "home",
     components: {},
@@ -12,7 +11,14 @@ export default {
         return {};
     },
 
-    created() {},
+    created() {
+        let d = { d: 1 };
+        let obj = { c: 1, d: d };
+        let b = { a: obj, d: d };
+        obj.b = b;
+        const result = deepCopy(obj);
+        console.log(result);
+    },
 
     methods: {}
 };

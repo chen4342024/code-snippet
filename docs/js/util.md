@@ -65,6 +65,8 @@ function chunk(array, process, context) {
 
 ### 浅拷贝
 
+浅拷贝是指复制对象的第一层
+
 ```javascript
 //es5
 function shallowClone(source) {
@@ -76,8 +78,64 @@ function shallowClone(source) {
     }
     return target;
 }
+```
 
-// es6
-// {...source}
-// Object.assign({},source);
+:::tip
+在 es6 中，直接使用 `{...source}` 或者 `Object.assign({},source);`即可
+:::
+
+### 深拷贝
+
+深拷贝是指一层一层的拷贝对象或数组。
+
+主要注意点是防止循环引用，
+
+例如 ：
+`let obj = {} ; let obj2 = {}; obj.a = obj2;`
+
+这种情况下，深拷贝需要打破循环引用，防止死循环
+
+```javascript
+// 深拷贝 es6版本
+export function deepCopy(source) {
+    // hash表，记录所有的对象的引用关系
+    let copyedMap = new WeakMap();
+    let isArray = target => target instanceof Array;
+    let isObject = target => target instanceof Object;
+
+    // 遍历方法，支持数组与对象
+    let each = function(list, callback) {
+        if (isArray(list)) {
+            list.forEach(callback);
+        } else if (isObject(list)) {
+            let keys = Object.keys(list);
+            keys.forEach(key => {
+                callback(list[key], key, list);
+            });
+        }
+    };
+
+    // 拷贝方法
+    let copy = function(item) {
+        if (isArray(item) || isObject(item)) {
+            // 检查是否循环引用，防止死循环
+            let existed = copyedMap.get(item);
+            if (existed) {
+                return existed;
+            }
+
+            // 递归拷贝
+            let result = isArray(item) ? [] : {};
+            copyedMap.set(item, result);
+            each(item, (value, key) => {
+                result[key] = copy(value);
+            });
+
+            return result;
+        } else {
+            return item;
+        }
+    };
+    return copy(source);
+}
 ```
