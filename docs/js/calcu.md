@@ -122,3 +122,7 @@ export function division(arg1, arg2) {
     return arg1 / arg2;
 }
 ```
+
+## 其他
+
+[整体的源码链接](https://github.com/chen4342024/code-snippet/blob/master/src/utils/calcu.js)
