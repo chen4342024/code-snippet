@@ -4,6 +4,7 @@
 
 <script>
 import { deepCopy } from "../utils/util.js";
+import { multiply } from "../utils/calcu.js";
 export default {
     name: "home",
     components: {},
@@ -12,15 +13,23 @@ export default {
     },
 
     created() {
-        let d = { d: 1 };
-        let obj = { c: 1, d: d };
-        let b = { a: obj, d: d };
-        obj.b = b;
-        const result = deepCopy(obj);
-        console.log(result);
+        this.mul();
     },
 
-    methods: {}
+    methods: {
+        deepCopy() {
+            let d = { d: 1 };
+            let obj = { c: 1, d: d };
+            let b = { a: obj, d: d };
+            obj.b = b;
+            const result = deepCopy(obj);
+            console.log(result);
+        },
+
+        mul() {
+            console.log(multiply(0.1, 0.2));
+        }
+    }
 };
 </script>
 
