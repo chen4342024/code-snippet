@@ -1,9 +1,8 @@
 module.exports = {
     base: '/code-snippet/',
-    title: '常用代码片段收集',
-    description: '常用代码片段收集',
+    title: '代码片段收集',
+    description: '想用的时候能顺手拿到',
     themeConfig: {
-        lastUpdated: '上次更新', // string | boolean
         nav: [{
             text: '更多',
             items: [
@@ -11,6 +10,7 @@ module.exports = {
                 { text: 'GitHub', link: 'https://github.com/chen4342024' },
             ]
         }],
+        lastUpdated: '上次更新', // string | boolean
         sidebar: [{
                 title: 'JS 相关',
                 collapsable: false,

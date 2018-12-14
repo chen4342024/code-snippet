@@ -1,2 +1,15 @@
-# 项目介绍
-这里主要用于整理一些编码过程中经常用到的一些代码片段，方便在使用的时候查询到
+---
+home: true
+heroImage: /logo4.jpeg
+actionText: 快速进入
+actionLink: /js/dom
+features:
+    - title: 片段分类
+      details: js相关、css相关、其他
+    - title: 可直接使用
+      details: 大部分的片段都在项目应用过，并经过测试
+    - title: 使用技巧
+      details: 善用右上角搜索，后期会加强搜索的功能，目前仅支持 `3` 级标题以内的搜索
+
+footer: MIT Licensed | Copyright © 2018-present Andy Chen
+---
