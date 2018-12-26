@@ -3,6 +3,9 @@ home: true
 heroImage: /logo4.jpeg
 actionText: 快速进入
 actionLink: /js/dom
+meta:
+    - name: google-site-verification
+      content: UAsuHnyAb-TEPVLJBQT7gMxsZusN1ieGnrs-O0-NObM
 features:
     - title: 片段分类
       details: js相关、css相关、其他
