@@ -24,7 +24,9 @@ module.exports = {
                     'js/throttled',
                     'js/url',
                     'js/calcu',
-                    'js/event'
+                    'js/event',
+                    'js/countDown',
+                    'js/form'
                 ]
             },
             {
