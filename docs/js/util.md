@@ -139,3 +139,39 @@ export function deepCopy(source) {
     return copy(source);
 }
 ```
+
+### 多次触发才真正执行
+
+在一定的时间间隔内，触发到一定次数。才真正调用处理函数
+
+```javascript
+/**
+ * 包装一个函数，在一定时间里触发了一定次数之后，才触发
+ * @param count 次数
+ * @param wait 时长
+ * @param func 触发的方法
+ * @param context 上下文
+ */
+export function repeatAfter(count, wait, func, context = null) {
+    let timer = null;
+    let num = 0;
+    return function(...args) {
+        // 清空timer
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+        // 增加数量
+        num++;
+        console.log(`tap num --> ${num}`);
+        if (num >= count) {
+            func.apply(context, args);
+        }
+
+        // 多少秒后还未进入就清0
+        timer = setTimeout(() => {
+            num = 0;
+        }, wait);
+    };
+}
+```
