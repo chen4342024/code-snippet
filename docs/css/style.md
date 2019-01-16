@@ -82,3 +82,7 @@ body {
 :::warning
 这块代码仅对 `IOS` 生效，`android` 上网络上有说用`WeixinJSBridge`，但是我没试。`android` 端就不处理了
 :::
+
+
+### android端价格符号¥少一横问题
+在某些android机上，会出现 ¥ 少一横的情况 。 这个是因为用了全角的符号。 复制 ¥ 替换你代码中的符号，既可以解决问题
