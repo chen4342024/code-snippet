@@ -57,7 +57,8 @@ export function validateIdCard(idCard) {
     //如果通过该验证，说明身份证格式正确，但准确性还需计算
     if (regIdCard.test(idCard)) {
         if (idCard.length == 18) {
-            var idCardWi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2); //将前17位加权因子保存在数组里
+            //将前17位加权因子保存在数组里
+            var idCardWi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2); 
             var idCardY = new Array(1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2); //这是除以11后，可能产生的11位余数、验证码，也保存成数组
             var idCardWiSum = 0; //用来保存前17位各自乖以加权因子后的总和
             for (var i = 0; i < 17; i++) {
@@ -84,6 +85,8 @@ export function validateIdCard(idCard) {
                     return false;
                 }
             }
+        } else {
+            return true;
         }
     } else {
         // alert("身份证格式不正确!");
