@@ -5,13 +5,24 @@
 > 在不同浏览器会有兼容问题，故需要进行一下兼容
 
 ```javascript
-//获取scrollTop
-function getScrollTop() {
+//获取页面scrollTop
+function getPageScrollTop() {
     var scrollTop =
         document.documentElement.scrollTop ||
         window.pageYOffset ||
         document.body.scrollTop;
     return scrollTop;
+}
+
+// 获取元素的scrollTop
+function getScrollTop(element) {
+    if (element === window) {
+        return Math.max(
+            window.pageYOffset || 0,
+            document.documentElement.scrollTop
+        );
+    }
+    return element.scrollTop;
 }
 
 //设置scrollTop
@@ -69,6 +80,7 @@ function isComment(node) {
 ```
 
 ### 一个很简单的模板引擎
+
 ```javascript
 /**
  * render
@@ -113,4 +125,3 @@ function render(tpl, data) {
     return new Function(code).apply(data);
 }
 ```
-
