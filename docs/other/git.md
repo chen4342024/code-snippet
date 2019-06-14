@@ -59,3 +59,6 @@
 1. 在上一步创建出来的 `master-20190614` 中，修复问题
 2. 修复完合并 `master-20190614` --> `master`
 3. `git push` 推送上去
+
+### 撤销本地的修改
+` git reset --hard HEAD `
