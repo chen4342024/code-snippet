@@ -41,3 +41,21 @@
 `git check-ignore -v 文件名`
 
 `git add \* 查看所有文件`
+
+### git 回滚
+
+#### 回滚 master
+
+1. 当前 master 版本有问题，创建一个新分支 master-20190614 出来
+2. 回滚到对应的版本
+
+-   `git reset --hard xxxxxxxx` ：回滚本地
+-   `git push -f` : 强推到远程分支
+
+> 这时候 , master 已经回滚到上一个版本 xxxxx 了
+
+#### 修完问题再重新上
+
+1. 在上一步创建出来的 `master-20190614` 中，修复问题
+2. 修复完合并 `master-20190614` --> `master`
+3. `git push` 推送上去
