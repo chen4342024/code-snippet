@@ -62,3 +62,7 @@
 
 ### 撤销本地的修改
 ` git reset --hard HEAD `
+
+
+### 查看 tag 以及对应的 commidId
+` git ls-remote --tags origin `;
