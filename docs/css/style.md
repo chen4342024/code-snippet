@@ -83,6 +83,19 @@ body {
 这块代码仅对 `IOS` 生效，`android` 上网络上有说用`WeixinJSBridge`，但是我没试。`android` 端就不处理了
 :::
 
+### android 端价格符号 ¥ 少一横问题
 
-### android端价格符号¥少一横问题
-在某些android机上，会出现 ¥ 少一横的情况 。 这个是因为用了全角的符号。 复制 ¥ 替换你代码中的符号，既可以解决问题
+在某些 android 机上，会出现 ¥ 少一横的情况 。 这个是因为用了全角的符号。 复制 ¥ 替换你代码中的符号，既可以解决问题
+
+### 箭头
+
+```css
+.xxx {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 0.14rem solid transparent;
+    border-right: 0.14rem solid transparent;
+    border-top: 0.14rem solid #f75539;
+}
+```

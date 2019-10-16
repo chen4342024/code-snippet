@@ -3,15 +3,21 @@ module.exports = {
     title: '代码片段收集',
     description: '想用的时候能顺手拿到',
     themeConfig: {
-        nav: [{
-            text: '更多',
-            items: [
-                { text: '个人博客', link: 'https://chen4342024.github.io/new-blog/' },
-                { text: 'GitHub', link: 'https://github.com/chen4342024' },
-            ]
-        }],
+        nav: [
+            {
+                text: '更多',
+                items: [
+                    {
+                        text: '个人博客',
+                        link: 'https://chen4342024.github.io/new-blog/'
+                    },
+                    { text: 'GitHub', link: 'https://github.com/chen4342024' }
+                ]
+            }
+        ],
         lastUpdated: '上次更新', // string | boolean
-        sidebar: [{
+        sidebar: [
+            {
                 title: 'JS 相关',
                 collapsable: false,
                 children: [
@@ -32,7 +38,7 @@ module.exports = {
             {
                 title: 'CSS 相关',
                 collapsable: false,
-                children: ['css/style']
+                children: ['css/style', 'css/mixins']
             },
             {
                 title: '其他',

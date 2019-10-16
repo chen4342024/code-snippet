@@ -152,5 +152,38 @@ export const now =
     };
 ```
 
+### 格式化倒计时时间
 
+```javascript
+/**
+ * 格式化时间
+ */
+export function formatTime(time) {
+    const seconds = Math.floor((time / 1000) % 60);
+    const minutes = Math.floor((time / 1000 / 60) % 60);
+    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+    return { days, hours, minutes, seconds };
+},
+```
 
+### 获取剩余时间
+
+> 用于时间较长的倒计时,根据倒计时开始时的设备时间以及服务器时间差异，实时计算剩余时间
+
+> 防止 app 切到后台时 js 不运行导致倒计时不准确
+
+```javascript
+/**
+ * 获取剩余时间 , 以下时间都是时间戳 13位的 ms
+ * @param  {Number} endTime    截止时间
+ * @param  {Number} deviceTime 设备时间
+ * @param  {Number} serverTime 服务端时间
+ * @return {Object}            剩余时间对象
+ */
+export function getRemainTime(endTime, deviceTime, serverTime) {
+    const time = endTime - new Date().getTime() + (deviceTime - serverTime); // 一开始服务端的时间和客户端的时间差异
+    return time;
+},
+
+```
