@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表单验证 | 代码片段收集</title>
+    <meta name="description" content="想用的时候能顺手拿到">
+    
+    
+    <link rel="preload" href="/code-snippet/assets/css/0.styles.87803d0f.css" as="style"><link rel="preload" href="/code-snippet/assets/js/app.d04cbd3c.js" as="script"><link rel="preload" href="/code-snippet/assets/js/12.cd83b32f.js" as="script"><link rel="prefetch" href="/code-snippet/assets/js/10.9a9b4d46.js"><link rel="prefetch" href="/code-snippet/assets/js/11.4e96b412.js"><link rel="prefetch" href="/code-snippet/assets/js/13.06cd5f31.js"><link rel="prefetch" href="/code-snippet/assets/js/14.383ec3ea.js"><link rel="prefetch" href="/code-snippet/assets/js/15.3526df0c.js"><link rel="prefetch" href="/code-snippet/assets/js/16.01edc94d.js"><link rel="prefetch" href="/code-snippet/assets/js/17.8d4592e5.js"><link rel="prefetch" href="/code-snippet/assets/js/18.a93f27a3.js"><link rel="prefetch" href="/code-snippet/assets/js/19.a5929283.js"><link rel="prefetch" href="/code-snippet/assets/js/2.cfcc3015.js"><link rel="prefetch" href="/code-snippet/assets/js/20.f74cd6e7.js"><link rel="prefetch" href="/code-snippet/assets/js/3.9362b1ee.js"><link rel="prefetch" href="/code-snippet/assets/js/4.73bb8e1a.js"><link rel="prefetch" href="/code-snippet/assets/js/5.179ab99b.js"><link rel="prefetch" href="/code-snippet/assets/js/6.528fab81.js"><link rel="prefetch" href="/code-snippet/assets/js/7.e96c5276.js"><link rel="prefetch" href="/code-snippet/assets/js/8.fdd69b2e.js"><link rel="prefetch" href="/code-snippet/assets/js/9.d73f0c56.js">
+    <link rel="stylesheet" href="/code-snippet/assets/css/0.styles.87803d0f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/code-snippet/" class="home-link router-link-active"><!----> <span class="site-name">代码片段收集</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://chen4342024.github.io/new-blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/chen4342024" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://chen4342024.github.io/new-blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/chen4342024" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>JS 相关</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/js/dom.html" class="sidebar-link">Dom 相关</a></li><li><a href="/code-snippet/js/env.html" class="sidebar-link">浏览器识别</a></li><li><a href="/code-snippet/js/is.html" class="sidebar-link">类型判断</a></li><li><a href="/code-snippet/js/reg.html" class="sidebar-link">常用正则</a></li><li><a href="/code-snippet/js/util.html" class="sidebar-link">工具方法</a></li><li><a href="/code-snippet/js/date.html" class="sidebar-link">日期相关</a></li><li><a href="/code-snippet/js/throttled.html" class="sidebar-link">函数节流</a></li><li><a href="/code-snippet/js/url.html" class="sidebar-link">URL 相关</a></li><li><a href="/code-snippet/js/calcu.html" class="sidebar-link">js 常用计算</a></li><li><a href="/code-snippet/js/event.html" class="sidebar-link">事件管理</a></li><li><a href="/code-snippet/js/countDown.html" class="sidebar-link">倒计时</a></li><li><a href="/code-snippet/js/form.html" class="active sidebar-link">表单验证</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-snippet/js/form.html#如何使用" class="sidebar-link">如何使用</a></li><li class="sidebar-sub-header"><a href="/code-snippet/js/form.html#具体源码" class="sidebar-link">具体源码</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>CSS 相关</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/css/style.html" class="sidebar-link">样式相关</a></li><li><a href="/code-snippet/css/mixins.html" class="sidebar-link">scss mixins 集合</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/other/git.html" class="sidebar-link">git 操作</a></li></ul></div></li><li><a href="/code-snippet/todo.html" class="sidebar-link">待办事项</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="表单验证"><a href="#表单验证" aria-hidden="true" class="header-anchor">#</a> 表单验证</h1> <p>一个超简单的表单验证，当页面并没有引入其他第三方的表单验证控件的时候，表单验证会是一个比较烦的逻辑处理。</p> <p>有时候又不希望引入第三方库，毕竟有可能页面内容很少，没有必要</p> <p>这个时候可以使用这个稍微封装了一些简单的方法来提高开发效率</p> <h2 id="如何使用"><a href="#如何使用" aria-hidden="true" class="header-anchor">#</a> 如何使用</h2> <p>安装：新建一个新的文件 <code>eg:form.js</code> ,复制最下方源码（不到 200 行）到里面。</p> <p>引入：<code>import Form from './form.js'</code></p> <h3 id="快速开始"><a href="#快速开始" aria-hidden="true" class="header-anchor">#</a> 快速开始</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 安装</span>
+<span class="token keyword">import</span> Form <span class="token keyword">from</span> <span class="token string">'./form.js'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 初始化，定义验证规则</span>
+<span class="token keyword">let</span> myForm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Form</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    phone<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> validate<span class="token punctuation">:</span> Form<span class="token punctuation">.</span>required<span class="token punctuation">,</span> msg<span class="token punctuation">:</span> <span class="token string">'请输入手机号码'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> validate<span class="token punctuation">:</span> Form<span class="token punctuation">.</span>phone<span class="token punctuation">,</span> msg<span class="token punctuation">:</span> <span class="token string">'请输入正确的手机号码'</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 提交表单的时候</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> myForm<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// data为需要验证的数据  eg: {phone:13099998888}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>allPass<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 全部验证通过</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 验证不通过，展示第一个错误</span>
+    <span class="token keyword">let</span> firstError <span class="token operator">=</span> Form<span class="token punctuation">.</span><span class="token function">getFirstError</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$toast<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">{</span> msg<span class="token punctuation">:</span> firstError<span class="token punctuation">.</span>msg <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="方法介绍"><a href="#方法介绍" aria-hidden="true" class="header-anchor">#</a> 方法介绍</h3> <h4 id="构造函数"><a href="#构造函数" aria-hidden="true" class="header-anchor">#</a> 构造函数</h4> <p>接受一个 config 参数，参数类型为一个配置对象。 <code>{ key : ruleList }</code></p> <ul><li><code>key</code> : 需要验证的 <code>name</code></li> <li><code>ruleList</code> : 对象数组类型,包含一系列的 <code>rule</code>规则</li></ul> <p><code>rule</code> 包含 两个参数 ，<code>rule : { validate : func , msg : 'string' }</code></p> <ul><li><code>validate</code> : 函数类型，<code>return true</code> , 表示验证通过</li> <li><code>msg</code> ： 验证不通过返回的信息</li></ul> <h4 id="验证方法"><a href="#验证方法" aria-hidden="true" class="header-anchor">#</a> 验证方法</h4> <p>默认提供了一些列的方法，可以作为函数传到规则的 <code>validate</code> 方法</p> <ul><li><code>Form.required</code> 是否必填</li> <li><code>Form.email</code> 是否邮箱</li> <li><code>Form.digit</code> 是否数字</li> <li><code>Form.phoneCode</code> 是否手机区号</li> <li><code>Form.phone</code> 是否手机号码</li> <li><code>Form.alpha</code> 是否拼音</li> <li><code>Form.chinese</code> 是否是中文</li> <li><code>Form.date</code> 是否是日期格式</li> <li><code>Form.legalText</code> 是否由 汉字、字母和、数字和下划线_组成</li></ul> <h4 id="validate-data"><a href="#validate-data" aria-hidden="true" class="header-anchor">#</a> validate(data)</h4> <p>根据配置验证数据， 返回是否所有通过</p> <p>返回一个对象 <code>result</code></p> <ul><li><code>result.allPass</code> 表示是否全部通过</li> <li><code>result.result</code> 保存每个 name 验证的结果</li> <li><code>result.result['xxx'] : { validate , msg }</code></li></ul> <h4 id="validatebynames"><a href="#validatebynames" aria-hidden="true" class="header-anchor">#</a> validateByNames</h4> <p>验证多个 <code>name</code> ， 返回结果同 <code>validate(data)</code></p> <h4 id="validatebyname-name-value"><a href="#validatebyname-name-value" aria-hidden="true" class="header-anchor">#</a> validateByName(name,value)</h4> <p>验证特定 <code>name</code> ，返回结果为 ：<code>{ validate, msg }</code></p> <h4 id="getfirsterror"><a href="#getfirsterror" aria-hidden="true" class="header-anchor">#</a> getFirstError</h4> <p>当验证多个 <code>name</code> 的时候，获取第一个 <code>name</code> 的错误 , 返回结果为 ：<code>{ validate, msg }</code></p> <h2 id="具体源码"><a href="#具体源码" aria-hidden="true" class="header-anchor">#</a> 具体源码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">isFunction</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">typeof</span> func <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">noop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">/* eslint-disable no-useless-escape */</span>
+<span class="token comment">// 验证规则：邮箱</span>
+<span class="token keyword">const</span> <span class="token constant">REG_EMAIL</span> <span class="token operator">=</span> <span class="token regex">/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]+)+$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 验证规则：数字</span>
+<span class="token keyword">const</span> <span class="token constant">REG_DIGIT</span> <span class="token operator">=</span> <span class="token regex">/^(\d+)$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 验证规则：手机号码区号</span>
+<span class="token keyword">const</span> <span class="token constant">REG_PHONE_CODE</span> <span class="token operator">=</span> <span class="token regex">/^\+?(\d+)$/</span><span class="token punctuation">;</span> <span class="token comment">//验证规则---&gt; 首位可以是+号也可以不是，其他位都是数字</span>
+
+<span class="token comment">// 验证规则：手机号码</span>
+<span class="token keyword">const</span> <span class="token constant">REG_PHONE</span> <span class="token operator">=</span> <span class="token regex">/^1[3,4,5,6,7,8,9]\d{9}$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 验证规则：字母</span>
+<span class="token keyword">const</span> <span class="token constant">REG_ALPHA</span> <span class="token operator">=</span> <span class="token regex">/^[a-zA-Z\s]+$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 验证规则：中文</span>
+<span class="token keyword">const</span> <span class="token constant">REG_CHINESE</span> <span class="token operator">=</span> <span class="token regex">/^[\u2E80-\u9FFF]+$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 验证规则：日期</span>
+<span class="token keyword">const</span> <span class="token constant">REG_DATE</span> <span class="token operator">=</span> <span class="token regex">/^((?:18|19|20|21)\d\d)-(0[1-9]|[1-9]|1[012])-(0[1-9]|[1-9]|[12][0-9]|3[01])$/</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 汉字、字母和、数字和下划线_组成</span>
+<span class="token keyword">const</span> <span class="token constant">REG_LEGAL_TEXT</span> <span class="token operator">=</span> <span class="token regex">/^[a-zA-Z0-9\_\u4e00-\u9fa5]+$/i</span><span class="token punctuation">;</span>
+<span class="token comment">/* eslint-enable no-useless-escape */</span>
+
+<span class="token keyword">function</span> <span class="token function">checkReg</span><span class="token punctuation">(</span>reg<span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//默认配置</span>
+<span class="token keyword">const</span> defaultConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    onValidate<span class="token punctuation">:</span> noop
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Form</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>config <span class="token operator">=</span> config <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>options <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>defaultConfig<span class="token punctuation">,</span> <span class="token operator">...</span>options <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 根据配置验证数据， 返回是否所有通过
+     * 返回一个对象 result
+     * result.allPass 表示是否全部通过
+     * result.result 保存每个name验证的结果
+     * result.result['xxx'] : { validate , msg }
+     */</span>
+    <span class="token function">validate</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> validateConfig <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> names <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>validateConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token punctuation">{</span> allPass<span class="token punctuation">,</span> result <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">validateByNames</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            allPass<span class="token punctuation">,</span>
+            result
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 验证特定 name
+     * 结果： { validate, msg }
+     */</span>
+    <span class="token function">validateByName</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> validateConfig <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> configList <span class="token operator">=</span> validateConfig<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> Form<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>configList<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 验证一系列的name
+     * 返回一个对象 result
+     * result.allPass 表示是否全部通过
+     * result.result 保存每个name验证的结果
+     * result.result['xxx'] : { validate , msg }
+     */</span>
+    <span class="token function">validateByNames</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> allPass <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> validateResult <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> name <span class="token keyword">of</span> names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> value <span class="token operator">=</span> data<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">validateByName</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>validate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                validateResult<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> result<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>validate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                allPass <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token function">onValidate</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> validateResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            allPass<span class="token punctuation">,</span>
+            result<span class="token punctuation">:</span> validateResult
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否必填</span>
+    <span class="token keyword">static</span> <span class="token function">required</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> value<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否邮箱</span>
+    <span class="token keyword">static</span> <span class="token function">email</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_EMAIL</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否数字</span>
+    <span class="token keyword">static</span> <span class="token function">digit</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_DIGIT</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是手机区号</span>
+    <span class="token keyword">static</span> <span class="token function">phoneCode</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_PHONE_CODE</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是手机号码</span>
+    <span class="token keyword">static</span> <span class="token function">phone</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_PHONE</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是拼音</span>
+    <span class="token keyword">static</span> <span class="token function">alpha</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_ALPHA</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是中文</span>
+    <span class="token keyword">static</span> <span class="token function">chinese</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_CHINESE</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是日期格式</span>
+    <span class="token keyword">static</span> <span class="token function">date</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_DATE</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 是否是 汉字、字母和、数字和下划线_组成</span>
+    <span class="token keyword">static</span> <span class="token function">legalText</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">checkReg</span><span class="token punctuation">(</span><span class="token constant">REG_LEGAL_TEXT</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 根据配置验证对应的值
+     */</span>
+    <span class="token keyword">static</span> <span class="token function">validate</span><span class="token punctuation">(</span>configList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> value<span class="token punctuation">;</span> <span class="token comment">//转化为字符串</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> configList<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> config <span class="token operator">=</span> configList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> <span class="token punctuation">{</span> validate<span class="token punctuation">,</span> msg <span class="token punctuation">}</span> <span class="token operator">=</span> config<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isFunction</span><span class="token punctuation">(</span>validate<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">validate</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token punctuation">{</span> validate<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> msg <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span> validate<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token function">getFirstError</span><span class="token punctuation">(</span>errorResult <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> names <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>errorResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>names<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> errorResult<span class="token punctuation">[</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Form<span class="token punctuation">;</span>
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">1/10/2019, 12:12:25 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/code-snippet/js/countDown.html" class="prev">
+          倒计时
+        </a></span> <span class="next"><a href="/code-snippet/css/style.html">
+          样式相关
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/code-snippet/assets/js/app.d04cbd3c.js" defer></script><script src="/code-snippet/assets/js/12.cd83b32f.js" defer></script>
+  </body>
+</html>

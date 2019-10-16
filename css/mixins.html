@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>scss mixins 集合 | 代码片段收集</title>
+    <meta name="description" content="想用的时候能顺手拿到">
+    
+    
+    <link rel="preload" href="/code-snippet/assets/css/0.styles.87803d0f.css" as="style"><link rel="preload" href="/code-snippet/assets/js/app.d04cbd3c.js" as="script"><link rel="preload" href="/code-snippet/assets/js/4.73bb8e1a.js" as="script"><link rel="prefetch" href="/code-snippet/assets/js/10.9a9b4d46.js"><link rel="prefetch" href="/code-snippet/assets/js/11.4e96b412.js"><link rel="prefetch" href="/code-snippet/assets/js/12.cd83b32f.js"><link rel="prefetch" href="/code-snippet/assets/js/13.06cd5f31.js"><link rel="prefetch" href="/code-snippet/assets/js/14.383ec3ea.js"><link rel="prefetch" href="/code-snippet/assets/js/15.3526df0c.js"><link rel="prefetch" href="/code-snippet/assets/js/16.01edc94d.js"><link rel="prefetch" href="/code-snippet/assets/js/17.8d4592e5.js"><link rel="prefetch" href="/code-snippet/assets/js/18.a93f27a3.js"><link rel="prefetch" href="/code-snippet/assets/js/19.a5929283.js"><link rel="prefetch" href="/code-snippet/assets/js/2.cfcc3015.js"><link rel="prefetch" href="/code-snippet/assets/js/20.f74cd6e7.js"><link rel="prefetch" href="/code-snippet/assets/js/3.9362b1ee.js"><link rel="prefetch" href="/code-snippet/assets/js/5.179ab99b.js"><link rel="prefetch" href="/code-snippet/assets/js/6.528fab81.js"><link rel="prefetch" href="/code-snippet/assets/js/7.e96c5276.js"><link rel="prefetch" href="/code-snippet/assets/js/8.fdd69b2e.js"><link rel="prefetch" href="/code-snippet/assets/js/9.d73f0c56.js">
+    <link rel="stylesheet" href="/code-snippet/assets/css/0.styles.87803d0f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/code-snippet/" class="home-link router-link-active"><!----> <span class="site-name">代码片段收集</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://chen4342024.github.io/new-blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/chen4342024" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://chen4342024.github.io/new-blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/chen4342024" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>JS 相关</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/js/dom.html" class="sidebar-link">Dom 相关</a></li><li><a href="/code-snippet/js/env.html" class="sidebar-link">浏览器识别</a></li><li><a href="/code-snippet/js/is.html" class="sidebar-link">类型判断</a></li><li><a href="/code-snippet/js/reg.html" class="sidebar-link">常用正则</a></li><li><a href="/code-snippet/js/util.html" class="sidebar-link">工具方法</a></li><li><a href="/code-snippet/js/date.html" class="sidebar-link">日期相关</a></li><li><a href="/code-snippet/js/throttled.html" class="sidebar-link">函数节流</a></li><li><a href="/code-snippet/js/url.html" class="sidebar-link">URL 相关</a></li><li><a href="/code-snippet/js/calcu.html" class="sidebar-link">js 常用计算</a></li><li><a href="/code-snippet/js/event.html" class="sidebar-link">事件管理</a></li><li><a href="/code-snippet/js/countDown.html" class="sidebar-link">倒计时</a></li><li><a href="/code-snippet/js/form.html" class="sidebar-link">表单验证</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>CSS 相关</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/css/style.html" class="sidebar-link">样式相关</a></li><li><a href="/code-snippet/css/mixins.html" class="active sidebar-link">scss mixins 集合</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-snippet/other/git.html" class="sidebar-link">git 操作</a></li></ul></div></li><li><a href="/code-snippet/todo.html" class="sidebar-link">待办事项</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="scss-mixins-集合"><a href="#scss-mixins-集合" aria-hidden="true" class="header-anchor">#</a> scss mixins 集合</h1> <h3 id="一像素边框"><a href="#一像素边框" aria-hidden="true" class="header-anchor">#</a> 一像素边框</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 顶部一像素边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-top</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$left</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$right</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #e6e4dd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::before </span><span class="token punctuation">{</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> <span class="token variable">$left</span><span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> <span class="token variable">$right</span><span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> 15<span class="token punctuation">;</span>
+        <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 底部一像素边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-bottom</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$left</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$right</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #e6e4dd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::after </span><span class="token punctuation">{</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> <span class="token variable">$left</span><span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> <span class="token variable">$right</span><span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> 15<span class="token punctuation">;</span>
+        <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 左侧一像素边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-left</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$top</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$bottom</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #e6e4dd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::before </span><span class="token punctuation">{</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> <span class="token variable">$top</span><span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token variable">$bottom</span><span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> 15<span class="token punctuation">;</span>
+        <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 右侧一像素边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-right</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$top</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$bottom</span></span><span class="token punctuation">:</span> 0, <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #e6e4dd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::after </span><span class="token punctuation">{</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> <span class="token variable">$top</span><span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token variable">$bottom</span><span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> 15<span class="token punctuation">;</span>
+        <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素全边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-all</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #e6e4dd, <span class="token property"><span class="token variable">$radius</span></span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::before </span><span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$color</span><span class="token punctuation">;</span>
+        <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 200%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 200%<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left top<span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token variable">$radius</span><span class="token punctuation">;</span>
+        <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">10/16/2019, 9:39:25 AM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/code-snippet/css/style.html" class="prev">
+          样式相关
+        </a></span> <span class="next"><a href="/code-snippet/other/git.html">
+          git 操作
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/code-snippet/assets/js/app.d04cbd3c.js" defer></script><script src="/code-snippet/assets/js/4.73bb8e1a.js" defer></script>
+  </body>
+</html>
